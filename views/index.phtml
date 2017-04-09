@@ -1,0 +1,19 @@
+<?php require __DIR__ . '/includes/header.phtml';?>
+	<h1>Produtos</h1>
+	<hr>
+
+	<ul>
+		<?php foreach($products as $p):?>
+			<li>
+				<a href="/produto/<?=$p['id'];?>">
+					<?=$p['name'];?>
+				</a>
+				 - 
+				R$ <?=number_format($p['price'], 2, ',', '.');?> <br>
+				<small>
+					<?=date('d/m/Y', strtotime($p['created_at']));?>
+				</small>
+			</li>
+		<?php endforeach;?>
+	</ul>
+<?php require __DIR__ . '/includes/footer.phtml';?>

@@ -1,0 +1,10 @@
+<?php require __DIR__ . '/includes/header.phtml';?>
+	<h1><?=$product['name'];?></h1>
+	<strong>
+	R$ <?=number_format($product['price'], 2, ',', '.');?>
+		
+	</strong>
+	<hr>
+	<?=$product['description'];?>
+
+<?php require __DIR__ . '/includes/footer.phtml';?>
