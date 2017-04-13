@@ -22,8 +22,8 @@ if($uri[0] == 'produto') {
 		return $p['id'] == $id;
 	});
 
-	foreach ($product as $product) {}
-
+	$product = current($product);
+	
 	require __DIR__ . '/views/single.phtml';
 }
 
